@@ -175,7 +175,7 @@ async function getUserById(userId) {
     } = await client.query(/*sql*/ `
       SELECT id, username, name, location, active
       FROM users
-      WHERE id=${userId}
+      WHERE id=${userId};
     `);
 
     if (!user) {
